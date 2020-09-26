@@ -11,7 +11,7 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"remoteData": {
-				"uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"
@@ -72,6 +72,35 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "logaligroup.SAPUI5.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "overview",
+				"target": "overview"
+			}, {
+				"pattern": "detail",
+				"name": "detail",
+				"target": "detail"
+			}],
+			"targets": {
+				"overview": {
+					"viewId": "overview",
+					"viewName": "Overview"
+				},
+				"detail": {
+					"viewId": "detail",
+					"viewName": "Detail"
+				}
+			}
 		}
 	}
 }

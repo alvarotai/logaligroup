@@ -1,5 +1,5 @@
 <mvc:View controllerName="logaligroup.SAPUI5.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" displayBlock="true">
 	<Shell>
-		<App class="myCustomCss" id=""/>
+		<App class="myCustomCss" id="app"/>
 	</Shell>
 </mvc:View>
